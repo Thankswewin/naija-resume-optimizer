@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naija Resume Optimizer - ATS-Optimized Resume Builder for Nigerian Professionals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Naija Resume Optimizer</span>
+                </div>
+                <div class="header-actions">
+                    <button class="templates-btn" onclick="showTemplates()">
+                        <i class="fas fa-file-alt"></i>
+                        Templates
+                    </button>
+                    <button class="theme-toggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-edit"></i> Build Your ATS-Optimized Resume</h2>
+                    <p>Create a professional resume that passes Nigerian job market ATS systems</p>
+                </div>
+
+                <div class="input-grid">
+                    <!-- Resume Input -->
+                    <div class="resume-input">
+                        <h3><i class="fas fa-user"></i> Resume Information</h3>
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" placeholder="your.email@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" placeholder="+234 801 234 5678" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Location (City, State) *</label>
+                            <input type="text" id="location" placeholder="Lagos, Nigeria" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="linkedIn">LinkedIn Profile</label>
+                            <input type="url" id="linkedIn" placeholder="https://linkedin.com/in/yourprofile">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="professionalTitle">Professional Title *</label>
+                            <input type="text" id="professionalTitle" placeholder="e.g., Software Developer, Marketing Manager" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience">Years of Experience *</label>
+                            <select id="experience" required>
+                                <option value="">Select experience level</option>
+                                <option value="0-1">Entry Level (0-1 years)</option>
+                                <option value="1-3">Junior (1-3 years)</option>
+                                <option value="3-5">Mid-Level (3-5 years)</option>
+                                <option value="5-10">Senior (5-10 years)</option>
+                                <option value="10+">Expert (10+ years)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="industry">Industry *</label>
+                            <select id="industry" required>
+                                <option value="">Select your industry</option>
+                                <option value="technology">Technology/IT</option>
+                                <option value="finance">Banking & Finance</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="education">Education</option>
+                                <option value="marketing">Marketing & Communications</option>
+                                <option value="sales">Sales & Business Development</option>
+                                <option value="hr">Human Resources</option>
+                                <option value="engineering">Engineering</option>
+                                <option value="legal">Legal</option>
+                                <option value="consulting">Consulting</option>
+                                <option value="media">Media & Entertainment</option>
+                                <option value="retail">Retail & E-commerce</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="oil-gas">Oil & Gas</option>
+                                <option value="telecom">Telecommunications</option>
+                                <option value="agriculture">Agriculture</option>
+                                <option value="logistics">Logistics & Supply Chain</option>
+                                <option value="real-estate">Real Estate</option>
+                                <option value="hospitality">Hospitality & Tourism</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="professionalSummary">Professional Summary *</label>
+                            <textarea id="professionalSummary" rows="4" placeholder="Write a compelling 3-4 sentence summary of your skills, experience, and career goals..." required></textarea>
+                            <div class="char-count">0 characters</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skills">Key Skills *</label>
+                            <textarea id="skills" rows="3" placeholder="List your key skills separated by commas. Include both technical and soft skills..." required></textarea>
+                            <div class="skill-suggestions">
+                                <span>Suggested Nigerian Job Skills:</span>
+                                <button type="button" class="skill-tag" onclick="addSkill('Microsoft Office')">Microsoft Office</button>
+                                <button type="button" class="skill-tag" onclick="addSkill('Communication')">Communication</button>
+                                <button type="button" class="skill-tag" onclick="addSkill('Project Management')">Project Management</button>
+                                <button type="button" class="skill-tag" onclick="addSkill('Customer Service')">Customer Service</button>
+                                <button type="button" class="skill-tag" onclick="addSkill('Data Analysis')">Data Analysis</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experienceDetails">Work Experience *</label>
+                            <textarea id="experienceDetails" rows="6" placeholder="Detail your work experience, including company names, job titles, dates, and key achievements. Use action verbs and quantify results..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="education">Education *</label>
+                            <textarea id="education" rows="3" placeholder="Your educational background including degrees, institutions, and graduation years..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="certifications">Certifications & Training</label>
+                            <textarea id="certifications" rows="3" placeholder="Relevant certifications, professional training, and courses..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Job Description Input -->
+                    <div class="job-input">
+                        <h3><i class="fas fa-bullseye"></i> Target Job Description</h3>
+
+                        <div class="form-group">
+                            <label for="jobTitle">Target Job Title *</label>
+                            <input type="text" id="jobTitle" placeholder="e.g., Senior Software Engineer" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="companyType">Company Type *</label>
+                            <select id="companyType" required>
+                                <option value="">Select company type</option>
+                                <option value="startup">Startup</option>
+                                <option value="smes">SME</option>
+                                <option value="multinational">Multinational Corporation</option>
+                                <option value="government">Government Agency</option>
+                                <option value="ngo">NGO/Non-Profit</option>
+                                <option value="consulting">Consulting Firm</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="jobDescription">Job Description *</label>
+                            <textarea id="jobDescription" rows="10" placeholder="Paste the full job description here to optimize your resume for this specific role..." required></textarea>
+                            <div class="job-analysis-preview" id="jobAnalysisPreview">
+                                <h4>Job Analysis Preview</h4>
+                                <div id="jobKeywords"></div>
+                                <div id="jobRequirements"></div>
+                            </div>
+                        </div>
+
+                        <!-- Optimization Settings -->
+                        <div class="optimization-settings">
+                            <h3><i class="fas fa-sliders-h"></i> Optimization Settings</h3>
+
+                            <div class="setting-group">
+                                <label for="resumeFormat">Resume Format</label>
+                                <select id="resumeFormat">
+                                    <option value="professional">Professional (Most Common)</option>
+                                    <option value="functional">Functional (Skills-Based)</option>
+                                    <option value="combination">Combination</option>
+                                    <option value="chronological">Chronological</option>
+                                </select>
+                            </div>
+
+                            <div class="setting-group">
+                                <label for="resumeLength">Target Resume Length</label>
+                                <select id="resumeLength">
+                                    <option value="1">1 Page (Recommended for <10 years experience)</option>
+                                    <option value="2">2 Pages (For 10+ years experience)</option>
+                                </select>
+                            </div>
+
+                            <div class="setting-group">
+                                <label for="focusArea">Optimization Focus</label>
+                                <select id="focusArea">
+                                    <option value="ats">ATS Compatibility</option>
+                                    <option value="keywords">Keywords Matching</option>
+                                    <option value="achievements">Achievement Focus</option>
+                                    <option value="skills">Skills Emphasis</option>
+                                    <option value="balanced">Balanced Approach</option>
+                                </select>
+                            </div>
+
+                            <div class="setting-group">
+                                <label for="nigerianContext">Nigerian Market Context</label>
+                                <select id="nigerianContext">
+                                    <option value="formal">Formal (Corporate/Multinational)</option>
+                                    <option value="startup">Startup Friendly</option>
+                                    <option value="government">Government Style</option>
+                                    <option value="local">Local Business Style</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Generate Button -->
+                        <button class="optimize-btn" onclick="optimizeResume()">
+                            <i class="fas fa-magic"></i>
+                            Optimize Resume for ATS
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="section-header">
+                    <h2><i class="fas fa-check-circle"></i> Resume Optimization Results</h2>
+                    <div class="result-actions">
+                        <button class="copy-btn" onclick="copyResume()">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="download-btn" onclick="downloadResume()">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                        <button class="pdf-btn" onclick="downloadPDF()">
+                            <i class="fas fa-file-pdf"></i> Export PDF
+                        </button>
+                        <button class="new-resume-btn" onclick="newResume()">
+                            <i class="fas fa-plus"></i> New Resume
+                        </button>
+                    </div>
+                </div>
+
+                <div class="results-grid">
+                    <!-- ATS Score -->
+                    <div class="ats-score-card">
+                        <h3><i class="fas fa-chart-line"></i> ATS Compatibility Score</h3>
+                        <div class="score-circle">
+                            <span id="atsScore">85</span>
+                            <span class="score-label">Excellent</span>
+                        </div>
+                        <div class="score-details">
+                            <div class="score-item">
+                                <span>Keywords Match</span>
+                                <div class="progress-bar">
+                                    <div class="progress" id="keywordsProgress"></div>
+                                </div>
+                                <span id="keywordsScore">0%</span>
+                            </div>
+                            <div class="score-item">
+                                <span>Format ATS-Friendly</span>
+                                <div class="progress-bar">
+                                    <div class="progress" id="formatProgress"></div>
+                                </div>
+                                <span id="formatScore">0%</span>
+                            </div>
+                            <div class="score-item">
+                                <span>Content Quality</span>
+                                <div class="progress-bar">
+                                    <div class="progress" id="contentProgress"></div>
+                                </div>
+                                <span id="contentScore">0%</span>
+                            </div>
+                            <div class="score-item">
+                                <span>Nigerian Context</span>
+                                <div class="progress-bar">
+                                    <div class="progress" id="contextProgress"></div>
+                                </div>
+                                <span id="contextScore">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Optimized Resume -->
+                    <div class="optimized-resume">
+                        <h3><i class="fas fa-file-alt"></i> Your Optimized Resume</h3>
+                        <div class="resume-preview" id="resumePreview">
+                            <!-- Resume content will be inserted here -->
+                        </div>
+                        <div class="format-options">
+                            <button class="format-btn active" onclick="changeResumeFormat('professional')">Professional</button>
+                            <button class="format-btn" onclick="changeResumeFormat('modern')">Modern</button>
+                            <button class="format-btn" onclick="changeResumeFormat('minimal')">Minimal</button>
+                        </div>
+                    </div>
+
+                    <!-- Keyword Analysis -->
+                    <div class="keyword-analysis">
+                        <h3><i class="fas fa-key"></i> Keyword Analysis</h3>
+                        <div class="keyword-section">
+                            <h4>Matched Keywords (<span id="matchedCount">0</span>)</h4>
+                            <div class="keyword-tags" id="matchedKeywords"></div>
+                        </div>
+                        <div class="keyword-section">
+                            <h4>Missing Keywords (<span id="missingCount">0</span>)</h4>
+                            <div class="keyword-tags" id="missingKeywords"></div>
+                        </div>
+                        <div class="keyword-section">
+                            <h4>Suggested Keywords</h4>
+                            <div class="keyword-tags" id="suggestedKeywords"></div>
+                        </div>
+                    </div>
+
+                    <!-- Improvement Suggestions -->
+                    <div class="improvement-suggestions">
+                        <h3><i class="fas fa-lightbulb"></i> Improvement Suggestions</h3>
+                        <div class="suggestions-list" id="suggestionsList"></div>
+                    </div>
+
+                    <!-- Nigerian Market Tips -->
+                    <div class="nigerian-tips">
+                        <h3><i class="fas fa-info-circle"></i> Nigerian Job Market Tips</h3>
+                        <div class="tips-list" id="nigerianTipsList"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Templates Modal -->
+            <div class="modal" id="templatesModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3><i class="fas fa-file-alt"></i> Resume Templates</h3>
+                        <button class="close-btn" onclick="closeModal('templatesModal')">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="templates-grid">
+                            <div class="template-card" onclick="useTemplate('professional')">
+                                <div class="template-preview">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h4>Professional</h4>
+                                <p>Classic format suitable for corporate jobs</p>
+                                <span class="template-badge popular">Popular</span>
+                            </div>
+                            <div class="template-card" onclick="useTemplate('modern')">
+                                <div class="template-preview">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <h4>Modern</h4>
+                                <p>Contemporary design for creative industries</p>
+                                <span class="template-badge trending">Trending</span>
+                            </div>
+                            <div class="template-card" onclick="useTemplate('startup')">
+                                <div class="template-preview">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h4>Startup</h4>
+                                <p>Perfect for tech startups and innovations</p>
+                            </div>
+                            <div class="template-card" onclick="useTemplate('government')">
+                                <div class="template-preview">
+                                    <i class="fas fa-landmark"></i>
+                                </div>
+                                <h4>Government</h4>
+                                <p>Formal style for public sector positions</p>
+                            </div>
+                            <div class="template-card" onclick="useTemplate('academic')">
+                                <div class="template-preview">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h4>Academic</h4>
+                                <p>Clean format for educational institutions</p>
+                            </div>
+                            <div class="template-card" onclick="useTemplate('executive')">
+                                <div class="template-preview">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <h4>Executive</h4>
+                                <p>Sophisticated design for senior positions</p>
+                                <span class="template-badge premium">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Loading State -->
+        <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                <h3>Optimizing Your Resume...</h3>
+                <p>Analyzing job description and matching keywords for Nigerian job market</p>
+                <div class="loading-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,30 +1,40 @@
 # Naija Resume Optimizer
 
-📄 **ATS-optimized resume tailoring for Nigerian job seekers**
+Demonstrates a Nigeria-focused resume-review workflow with local demonstration logic.
 
-## Description
-The Naija Resume Optimizer helps Nigerian job seekers tailor their CV bullet points to specific job descriptions, focusing on ATS keywords and concise impact statements that get through automated screening.
+## Status
 
-## Features
-- 🎯 **ATS Optimization**: Keywords that pass automated screening
-- 💼 **Nigerian Context**: Optimized for Nigerian job markets
-- 📊 **Impact Metrics**: Quantifies achievements and contributions
-- ⚡ **Instant Tailoring**: Custom resumes for each application
-- 🔧 **Keyword Analysis**: Matches job description requirements
+**Browser-based portfolio demo.** The checked-in `script.js` uses local
+JavaScript, rules, templates or simulated responses. It does not call a hosted
+LLM API or run a trained local model.
 
-## Perfect For
-- Nigerian job seekers
-- Recent graduates
-- Career changers
-- Remote job applicants
-- Tech professionals
+This is not a hiring-decision service or a validated assessment of job applicants.
 
-## Getting Started
-```bash
-git clone https://github.com/Thankswewin/naija-resume-optimizer.git
-cd naija-resume-optimizer
-open index.html
-```
+## Try It Locally
+
+1. Clone this repository.
+2. Open `index.html` in a modern browser.
+3. Use sample or non-sensitive inputs to explore the workflow.
+
+No npm or Python installation is required for this standalone demo.
+Some fonts or styles may load from external CDNs.
+
+## Repository Layout
+
+| File | Purpose |
+| --- | --- |
+| `index.html` | Interface and page markup |
+| `script.js` | Local workflow and demonstration logic |
+| `styles.css` | Styling |
+
+## Development
+
+A real model integration would be a separate implementation. Keep provider
+credentials on a backend, never in browser JavaScript, and add appropriate
+validation and tests before using the tool with customer data.
 
 ## Author
-**Philemon Ofotan** | GitHub: [@Thankswewin](https://github.com/Thankswewin) | Email: pheelymon@gmail.com
+
+[Philemon Ofotan](https://github.com/Thankswewin), founder of
+[Archyy Studio](https://archyy.live).
+
